@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <title>Random Dance Party!</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=1280, user-scalable=yes" /> -->
+    <link data-n-head="true" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:400,400i,500,500i,700,700i|Material+Icons">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="client.js"></script>
+    
+    <!-- Favicons for fancy people -->
+    <!-- For Opera Coast users -->
+    <link rel='icon' sizes='228x228' href='/rdp_favicons/rdp_favicon_228.png'>
+    <!-- For Opera Speed Dial users -->
+    <link rel='icon' sizes='195x195' href='/rdp_favicons/rdp_favicon_195.png'>
+    <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel='apple-touch-icon-precomposed' sizes='152x152' href='/rdp_favicons/rdp_favicon_152.png'>
+    <!-- Same 152 icon, but for normal people -->
+    <link rel='icon' sizes='152x152' href='/rdp_favicons/rdp_favicon_152.png'>
+    <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel='apple-touch-icon-precomposed' sizes='144x144' href='/rdp_favicons/rdp_favicon_144.png'>
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon): -->
+    <meta name='msapplication-TileColor' content='#FFFFFF'>
+    <meta name='msapplication-TileImage' content='/rdp_favicons/rdp_favicon_144.png'>
+    <!-- Same 144 icon but for normal peopl -->
+    <link rel='icon' sizes='144x144' href='/rdp_favicons/rdp_favicon_144.png'>
+    <!-- For Chrome Web Store people -->
+    <link rel='icon' sizes='128x128' href='/rdp_favicons/rdp_favicon_128.png'>
+    <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel='apple-touch-icon-precomposed' sizes='120x120' href='/rdp_favicons/rdp_favicon_120.png'>
+    <!-- Same 120 icon but for normal people -->
+    <link rel='icon' sizes='120x120' href='/rdp_favicons/rdp_favicon_120.png'>
+    <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel='apple-touch-icon-precomposed' sizes='114x114' href='/rdp_favicons/rdp_favicon_114.png'>
+    <!-- Same 114 icon, but for normal people -->
+    <link rel='icon' sizes='114x114' href='/rdp_favicons/rdp_favicon_114.png'>
+    <!-- Icon For GoogleTV -->
+    <link rel='icon' sizes='96x96' href='/rdp_favicons/rdp_favicon_96.png'>
+    <!-- For first- and second-generation iPad: -->
+    <link rel='apple-touch-icon-precomposed' sizes='72x72' href='/rdp_favicons/rdp_favicon_72.png'>
+    <!-- Same 72 icon, but for normal people -->
+    <link rel='icon' sizes='72x72' href='/rdp_favicons/rdp_favicon_72.png'>
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel='apple-touch-icon-precomposed' sizes='57x57' href='/rdp_favicons/rdp_favicon_57.png'>
+    <!-- Same 57 icon, but for normal people -->
+    <link rel='icon' sizes='57x57' href='/rdp_favicons/rdp_favicon_57.png'>
+    <!-- Saftey favicon links for stragglers -->
+    <link rel='icon' sizes='32x32' href='/rdp_favicons/rdp_favicon_32.png'>
+    <link rel='icon' sizes='16x16' href='/rdp_favicons/rdp_favicon_16.png'> 
+</head>
+<body>
+<div id="pageHeader">
+    <div id="logo"></div>
+    <div id="headerBanner">Random Dance Party</div>
+</div>
+<div id="navBar">
+    <a class="navItem" href="#" onclick="$('#leftNav').toggle(); $('#pageContents').toggleClass('showNav');" id="leftNavToggle"><i class="material-icons" style="vertical-align: middle;">menu</i></a>
+    <a class="navItem" href="https://desertbus.org"><div>Desert Bus For Hope</div></a>
+    <a class="navItem" href="https://vst.ninja"><div>Video Strike Team</div></a>
+    <div class="dropDownMenuContainer">
+        <a class="navItem active" href="#navBar" onclick="player.cueVideoById(getRDP())"><div>Random Dance Party &#x25be;</div></a>
+        <div class="dropDownMenu">
+                <a class="navItem" href="/DesertBus.html"><div>Random Desert Bus Video</div></a>
+                <a class="navItem" href="/Crapshot.html"><div>Random Crapshot</div></a>
+        </div>
+    </div>
+</div>
+<div id="contentRow">
+    <div id="leftNav">
+        <a class="navItem" href="?" name="All"><div>All Years</div></a>
+        <a class="navItem" href="?Year=DB12" name="DB12"><div>Desert Bus 2018</div></a>
+        <a class="navItem" href="?Year=DB11" name="DB11"><div>Desert Bus 2017</div></a>
+        <a class="navItem" href="?Year=DB10" name="DB10"><div>Desert Bus 10</div></a>
+        <a class="navItem" href="?Year=DB9" name="DB9"><div>Desert Bus 9</div></a>
+        <a class="navItem" href="?Year=DB8" name="DB8"><div>Desert Bus 8</div></a>
+        <a class="navItem" href="?Year=DB7" name="DB7"><div>Desert Bus 7</div></a>
+        <a class="navItem" href="?Year=DB6" name="DB6"><div>Desert Bus 6</div></a>
+        <a class="navItem" href="?Year=DB5" name="DB5"><div>Desert Bus 5</div></a>
+        <a class="navItem" href="?Year=DB4" name="DB4"><div>Desert Bus 4</div></a>
+    </div>
+    <div id="pageContents">
+        <div id="playerContainer">
+            <div id="videoContainer">
+                <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+                <div id="player"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <a href="https://desertbus.org/">Desert Bus For Hope</a>
+            <a href="https://www.youtube.com/desertbusforhope"><i class="material-icons">video_library</i> YouTube Channel</a>
+            <a href="https://www.youtube.com/desertbusforhope"><i class="material-icons">video_library</i> Full Playlist</a>
+            <a href="#navBar" id="nightModeBtn" onclick="toggleMonochrome();">Night Mode</a>
+            <a href="#navBar" id="dayModeBtn" onclick="toggleMonochrome();">Day Mode</a>
+        </div>
+    </div>
+</div>
+
+<script>    
+    loadVideos('/RDPList.json');
+</script>
+</body>
+</html>

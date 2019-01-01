@@ -1,0 +1,6 @@
+https://thekevinscott.com/image-classification-with-javascript/
+https://towardsdatascience.com/in-browser-object-detection-using-yolo-and-tensorflow-js-d2a2b7429f7c
+https://hub.docker.com/r/damianmoore/tensorflow-image-classifier/
+
+Hubbe's suggestion:
+https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html

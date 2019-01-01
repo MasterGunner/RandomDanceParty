@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <title>Video Strike Team</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=1280, user-scalable=yes" />
+    <link data-n-head="true" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:400,400i,500,500i,700,700i|Material+Icons">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="client.js"></script>
+    
+    <!-- Favicons for fancy people -->
+    <!-- For Opera Coast users -->
+    <link rel='icon' sizes='228x228' href='/rdp_favicons/rdp_favicon_228.png'>
+    <!-- For Opera Speed Dial users -->
+    <link rel='icon' sizes='195x195' href='/rdp_favicons/rdp_favicon_195.png'>
+    <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel='apple-touch-icon-precomposed' sizes='152x152' href='/rdp_favicons/rdp_favicon_152.png'>
+    <!-- Same 152 icon, but for normal people -->
+    <link rel='icon' sizes='152x152' href='/rdp_favicons/rdp_favicon_152.png'>
+    <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel='apple-touch-icon-precomposed' sizes='144x144' href='/rdp_favicons/rdp_favicon_144.png'>
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon): -->
+    <meta name='msapplication-TileColor' content='#FFFFFF'>
+    <meta name='msapplication-TileImage' content='/rdp_favicons/rdp_favicon_144.png'>
+    <!-- Same 144 icon but for normal peopl -->
+    <link rel='icon' sizes='144x144' href='/rdp_favicons/rdp_favicon_144.png'>
+    <!-- For Chrome Web Store people -->
+    <link rel='icon' sizes='128x128' href='/rdp_favicons/rdp_favicon_128.png'>
+    <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel='apple-touch-icon-precomposed' sizes='120x120' href='/rdp_favicons/rdp_favicon_120.png'>
+    <!-- Same 120 icon but for normal people -->
+    <link rel='icon' sizes='120x120' href='/rdp_favicons/rdp_favicon_120.png'>
+    <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel='apple-touch-icon-precomposed' sizes='114x114' href='/rdp_favicons/rdp_favicon_114.png'>
+    <!-- Same 114 icon, but for normal people -->
+    <link rel='icon' sizes='114x114' href='/rdp_favicons/rdp_favicon_114.png'>
+    <!-- Icon For GoogleTV -->
+    <link rel='icon' sizes='96x96' href='/rdp_favicons/rdp_favicon_96.png'>
+    <!-- For first- and second-generation iPad: -->
+    <link rel='apple-touch-icon-precomposed' sizes='72x72' href='/rdp_favicons/rdp_favicon_72.png'>
+    <!-- Same 72 icon, but for normal people -->
+    <link rel='icon' sizes='72x72' href='/rdp_favicons/rdp_favicon_72.png'>
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel='apple-touch-icon-precomposed' sizes='57x57' href='/rdp_favicons/rdp_favicon_57.png'>
+    <!-- Same 57 icon, but for normal people -->
+    <link rel='icon' sizes='57x57' href='/rdp_favicons/rdp_favicon_57.png'>
+    <!-- Saftey favicon links for stragglers -->
+    <link rel='icon' sizes='32x32' href='/rdp_favicons/rdp_favicon_32.png'>
+    <link rel='icon' sizes='16x16' href='/rdp_favicons/rdp_favicon_16.png'> 
+    <style>
+        #VSTCollectionsTable {
+            width:100%; 
+        }
+        #VSTCollectionsTable a {
+            color:black;
+            text-decoration: none;
+        }
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color:#dddddd;
+        }
+        th {
+            line-height:32px;
+        }
+        .expandRightMenuContainer {
+            position:relative;
+        }
+        .expandRightMenu {
+            display:none;
+            z-index:1;
+            background:#fff;
+            border:1px solid black;
+            position:absolute;
+            top:0px;
+            left:100%;
+            width:200px;
+            text-align: left;
+            
+        }
+        .expandRightMenuContainer:hover .expandRightMenu {
+            display:block;
+        }
+        .expandRightMenu div {
+            padding:5px;
+        }
+        .expandRightMenu div:hover {
+            background:rgba(0,0,0,0.12);
+        }
+    </style>
+</head>
+<body>
+<div id="pageHeader">
+    <div id="logo"></div>
+    <div id="headerBanner">Desert Bus Video Strike Team</div>
+</div>
+<div id="navBar">
+    <a class="navItem" href="https://desertbus.org"><div>Desert Bus For Hope</div></a>
+    <a class="navItem active" href="https://vst.ninja"><div>Video Strike Team</div></a>
+    <div class="dropDownMenuContainer">
+        <a class="navItem" href="/"><div>Random Dance Party &#x25be;</div></a>
+        <div class="dropDownMenu">
+            <a class="navItem" href="/Random-DB-Video.html"><div>Random Desert Bus Video</div></a>
+                <a class="navItem" href="/Random-Crapshot.html"><div>Random Crapshot</div></a>
+        </div>
+    </div>
+</div>
+<div id="contentRow">
+    <div id="pageContents noLeftNav">
+        <div class="sectionContainer">
+            <h1 style="color:#1976d2;font-size:34px;line-height:38px;">Collections By Year</h1>
+            <table id="VSTCollectionsTable">
+                <tr>
+                    <th>Year</th>
+                    <th>Spreadsheet</th>
+                    <th>Playlists</th>
+                    <th>Posters</th>
+                    <th>Gifs</th>
+                    <th>Torrent</th>
+                    <th>Other</th>
+                </tr>
+                <tr>
+                    <td>Desert Bus 2018</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">video_library</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">cloud_download</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Behind The Scenes</div></a>
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Dix's Log</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                            <a href="#"><div>Shift Clock</div></a>
+                            <a href="#"><div>Game Jam!</div></a>
+                            <a href="#"><div>Morning Game Shows</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 2017</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">video_library</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">cloud_download</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Behind The Scenes</div></a>
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Dix's Log</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                            <a href="#"><div>Shift Clock</div></a>
+                            <a href="#"><div>Music</div></a>
+                            <a href="#"><div>Game Jam!</div></a>
+                            <a href="#"><div>Morning Game Shows</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 10</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">video_library</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">cloud_download</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Behind The Scenes</div></a>
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Dix's Log</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                            <a href="#"><div>Shift Clock</div></a>
+                            <a href="#"><div>Game Jam!</div></a>
+                            <a href="#"><div>Morning Game Shows</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 9</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">video_library</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">cloud_download</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Behind The Scenes</div></a>
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Dix's Log</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                            <a href="#"><div>Shift Clock</div></a>
+                            <a href="#"><div>Morning Game Shows</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 8</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">video_library</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">cloud_download</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Behind The Scenes</div></a>
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Dix's Log</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                            <a href="#"><div>Music</div></a>
+                            <a href="#"><div>Game Jam!</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 7</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">video_library</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">cloud_download</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Dix's Log</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                            <a href="#"><div>Music</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 6</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">video_library</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">cloud_download</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                            <a href="#"><div>Music</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 5</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">video_library</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">cloud_download</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                            <a href="#"><div>Music</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 4</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">video_library</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">remove</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Behind The Scenes</div></a>
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 3</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">remove</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">remove</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Behind The Scenes</div></a>
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 2</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">remove</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">remove</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Desert Bus 1</td>
+                    <td><a href="#"><i class="material-icons">list_alt</i></a></td>
+                    <td><a href="#"><i class="material-icons">video_library</i></a></td>
+                    <td><a href="#"><i class="material-icons">image</i></a></td>
+                    <td><a href="#"><i class="material-icons">burst_mode</i></a></td>
+                    <td><a href="#"><i class="material-icons">remove</i></a></td>
+                    <td class="expandRightMenuContainer"><a href="#">More...</a>
+                        <div class="expandRightMenu">
+                            <a href="#"><div>Chat Stats</div></a>
+                            <a href="#"><div>Graphs</div></a>
+                            <a href="#"><div>Shirts</div></a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="sectionContainer">
+                <h1 style="color:#1976d2;font-size:34px;line-height:38px;">Other Collections</h1>
+				<!-- 	Experiment with different styles.
+						Add Cam & Ian Christmas, LRRMans spreadsheet. -->
+                <div style="display:inline-block;vertical-align:top;margin-right:50px;">
+                    <table>
+                        <tr><th>All Years</th></tr>
+                        <tr><td><a href="">Time-Lapses</a></td></tr>
+                        <tr><td><a href="">Multi-Year Skits</a></td></tr>
+                        <tr><td><a href="">Gifs</a></td></tr>
+                        <tr><td><a href="">Graphs</a></td></tr>
+                        <tr><td><a href="">Music</a></td></tr>
+                        <tr><td><a href="">Morning Game Shows</a></td></tr>
+                    </table>
+                </div>
+
+                <div style="display:inline-block;vertical-align:top;margin-right:50px;">
+                    <table>
+                        <tr><th>Desert Bus Ports</th></tr>
+                        <tr><td><a href="https://www.youtube.com/watch?v=LWFakFVNqYY&feature=youtu.be&t=1m4s">Desert Bus 79</a></td></tr>
+                        <tr><td><a href="https://store.steampowered.com/app/638110/Desert_Bus_VR/">Desert Bus VR</a></td></tr>
+                        <tr><td><a href="http://fwgames.ca/desert-bus/">Intellivision</a></td></tr>
+                        <tr><td><a href="https://www.desertbusvr.com/">Desert Bus VR</a></td></tr>
+                        <tr><td><a href="https://web.archive.org/web/20140128140434/http://desertbus2600.com:80/">Atari 2600</a></td></tr>
+                        <tr><td><a href="https://github.com/ekimekim/desertbus-curses">Desert Bus Curses</a></td></tr>
+                        <tr><td><a href="http://www.amateurpixels.com/">iOS, Android</a></td></tr>
+                        <tr><td><a href="http://wiibrew.org/wiki/Desert_Bus">Wii</a></td></tr>
+                        <tr><td><a href="https://forums.tigsource.com/index.php?topic=2805.0">Road Trip: Southwest USA (demake)</a></td></tr>
+                    </table>
+                </div>
+                
+        </div>
+        <div id="footer">
+            <a href="https://desertbus.org/">Desert Bus For Hope</a>
+            <a href="https://www.youtube.com/desertbusforhope"><i class="material-icons">video_library</i> YouTube Channel</a>
+            <a href="#navBar" id="nightModeBtn" onclick="toggleMonochrome();">Night Mode</a>
+            <a href="#navBar" id="dayModeBtn" onclick="toggleMonochrome();">Day Mode</a>
+        </div>
+    </div>
+</div>
+
+<script>
+</script>
+</body>
+</html>
